@@ -1,0 +1,16 @@
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\bin\Debug\net10.0\ClassLibrary2.deps.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\bin\Debug\net10.0\ClassLibrary2.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\bin\Debug\net10.0\ClassLibrary2.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\bin\Debug\net10.0\ClassLibrary3.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\bin\Debug\net10.0\ClassLibrary3.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.csproj.AssemblyReference.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.GeneratedMSBuildEditorConfig.editorconfig
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.AssemblyInfoInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.AssemblyInfo.cs
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.csproj.CoreCompileInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.sourcelink.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLib.E736BE99.Up2Date
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\refint\ClassLibrary2.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ClassLibrary2.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\ClassLibrary2\obj\Debug\net10.0\ref\ClassLibrary2.dll
