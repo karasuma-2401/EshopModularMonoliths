@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.4"
+services:
+  api:
+    build:
+      context: "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths"
+      dockerfile: "Bootstrapper/Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net10.0/Api.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "api:dev"
+    ports: []
+    volumes:
+    - "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Bootstrapper\\Api:/app:rw"
+    - "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths:/src:rw"
+    - "C:\\Users\\lemin\\.nuget\\packages:/home/app/.nuget/packages"
+    working_dir: "/app"

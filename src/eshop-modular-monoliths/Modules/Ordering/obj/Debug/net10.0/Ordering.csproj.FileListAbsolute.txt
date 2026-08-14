@@ -1,0 +1,16 @@
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\bin\Debug\net10.0\Ordering.deps.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\bin\Debug\net10.0\Ordering.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\bin\Debug\net10.0\Ordering.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\bin\Debug\net10.0\Shared.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\bin\Debug\net10.0\Shared.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.csproj.AssemblyReference.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.GeneratedMSBuildEditorConfig.editorconfig
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.AssemblyInfoInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.AssemblyInfo.cs
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.csproj.CoreCompileInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.sourcelink.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.csproj.Up2Date
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\refint\Ordering.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\ref\Ordering.dll
