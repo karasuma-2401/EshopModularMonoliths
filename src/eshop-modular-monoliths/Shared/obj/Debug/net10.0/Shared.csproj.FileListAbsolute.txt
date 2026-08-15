@@ -11,3 +11,5 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared\obj\Debug\net10.0\Sh
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared\obj\Debug\net10.0\refint\Shared.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared\obj\Debug\net10.0\Shared.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared\obj\Debug\net10.0\ref\Shared.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared\bin\Debug\net10.0\Shared.runtimeconfig.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared\obj\Debug\net10.0\Shared.genruntimeconfig.cache
