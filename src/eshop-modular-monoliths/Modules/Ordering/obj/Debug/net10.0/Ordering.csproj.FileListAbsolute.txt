@@ -14,3 +14,5 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\refint\Ordering.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\Ordering.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\obj\Debug\net10.0\ref\Ordering.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\bin\Debug\net10.0\Shared.Contracts.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Ordering\bin\Debug\net10.0\Shared.Contracts.pdb

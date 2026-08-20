@@ -32,6 +32,8 @@ public class Product: Aggregate<Guid>
     {
         ArgumentException.ThrowIfNullOrEmpty(name);
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(price);
+
+        var priceChanged = price != Price;
         
         Name = name;
         Category = category;
@@ -39,9 +41,8 @@ public class Product: Aggregate<Guid>
         ImageFile = imageFile;
         Price = price;
 
-        if (Price != price)
+        if (priceChanged)
         {
-            Price = price;
             AddDomainEvent(new ProductPriceChangedEvent(this));
         }
     }

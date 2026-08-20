@@ -1,0 +1,12 @@
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\bin\Debug\net10.0\Shared.Messaging.deps.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\bin\Debug\net10.0\Shared.Messaging.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\bin\Debug\net10.0\Shared.Messaging.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.AssemblyInfoInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.AssemblyInfo.cs
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.csproj.CoreCompileInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.sourcelink.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\refint\Shared.Messaging.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\ref\Shared.Messaging.dll

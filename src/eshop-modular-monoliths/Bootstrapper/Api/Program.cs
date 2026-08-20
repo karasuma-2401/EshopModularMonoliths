@@ -1,6 +1,15 @@
+using Carter;
+using Shared.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+var catalogAssembly = typeof(CatalogModule).Assembly;
+var basketAssembly = typeof(BasketModule).Assembly;
+var orderingAssembly = typeof(OrderingModule).Assembly;
+
+builder.Services.AddCarterWithAssemblies(catalogAssembly, basketAssembly, orderingAssembly);
+builder.Services.AddMediatRWithAssemblies(catalogAssembly, basketAssembly, orderingAssembly);
+
 
 builder.Services
     .AddCatalogModule(builder.Configuration)
@@ -9,20 +18,7 @@ builder.Services
     
 var app = builder.Build();
 
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseCors();
-
-app.UseAuthentication();
-
-app.UseAuthorization();
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-});
+app.MapCarter();
 
 app
     .UseCatalogModule()

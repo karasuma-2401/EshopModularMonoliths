@@ -175,3 +175,7 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Carter.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Carter.Analyzers.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Contracts.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Contracts.pdb

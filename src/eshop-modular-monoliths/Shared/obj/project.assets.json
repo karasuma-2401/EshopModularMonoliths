@@ -2,7 +2,44 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "FluentValidation/11.11.0": {
+      "Carter/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Carter.Analyzers": "10.0.0",
+          "FluentValidation": "12.1.0",
+          "Microsoft.Extensions.DependencyModel": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Carter.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Carter.dll": {
+            "related": ".pdb"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Carter.Analyzers/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeAnalysis.CSharp": "4.14.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Carter.Analyzers.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Carter.Analyzers.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "FluentValidation/12.1.0": {
         "type": "package",
         "compile": {
           "lib/net8.0/FluentValidation.dll": {
@@ -65,7 +102,7 @@
           }
         }
       },
-      "MediatR/14.1.0": {
+      "MediatR/14.2.0": {
         "type": "package",
         "dependencies": {
           "MediatR.Contracts": "[2.0.1, 3.0.0)",
@@ -123,7 +160,7 @@
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0"
         },
         "compile": {
-          "lib/net9.0/_._": {
+          "lib/net9.0/Microsoft.CodeAnalysis.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -181,7 +218,7 @@
           "Microsoft.CodeAnalysis.Common": "[5.0.0]"
         },
         "compile": {
-          "lib/net9.0/_._": {
+          "lib/net9.0/Microsoft.CodeAnalysis.CSharp.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -626,7 +663,7 @@
       "Microsoft.Extensions.DependencyModel/10.0.11": {
         "type": "package",
         "compile": {
-          "lib/net10.0/_._": {
+          "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
             "related": ".xml"
           }
         },
@@ -977,33 +1014,68 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "Shared.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Carter": "10.0.0",
+          "MediatR": "14.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Shared.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.Contracts.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "FluentValidation/11.11.0": {
-      "sha512": "cyIVdQBwSipxWG8MA3Rqox7iNbUNUTK5bfJi9tIdm4CAfH71Oo5ABLP4/QyrUwuakqpUEPGtE43BDddvEehuYw==",
+    "Carter/10.0.0": {
+      "sha512": "TMSfoaIwEuQBqDxt0EdUmGLe6yLnkEBwYeWunyDfxhDPmDKtV/o1tDYsNWG5eMO6ontHonFttIMwbsg+ddi8YQ==",
       "type": "package",
-      "path": "fluentvalidation/11.11.0",
+      "path": "carter/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/Carter.Analyzers.dll",
+        "carter.10.0.0.nupkg.sha512",
+        "carter.nuspec",
+        "carterlogo.png",
+        "lib/net10.0/Carter.dll",
+        "lib/net10.0/Carter.pdb"
+      ]
+    },
+    "Carter.Analyzers/10.0.0": {
+      "sha512": "NC8nnaoCCKUDkZgDXIk7p7IgXOYsAYrOPp4a9AwFPGSoa92VqOnpp/O4YeKicnMByNigTCNzua7yxIbSFfRTqA==",
+      "type": "package",
+      "path": "carter.analyzers/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "carter.analyzers.10.0.0.nupkg.sha512",
+        "carter.analyzers.nuspec",
+        "carterlogo.png",
+        "lib/netstandard2.0/Carter.Analyzers.dll",
+        "lib/netstandard2.0/Carter.Analyzers.pdb"
+      ]
+    },
+    "FluentValidation/12.1.0": {
+      "sha512": "FqWEn8BdbbFEHGanj9K8SVo+LyBeFWy2rolaE+e1TNUbifr8M7Iss+I1AqTSc8kjKtvjl/WN4XIHiRpslh42bA==",
+      "type": "package",
+      "path": "fluentvalidation/12.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.11.0.nupkg.sha512",
+        "fluentvalidation.12.1.0.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net5.0/FluentValidation.dll",
-        "lib/net5.0/FluentValidation.xml",
-        "lib/net6.0/FluentValidation.dll",
-        "lib/net6.0/FluentValidation.xml",
-        "lib/net7.0/FluentValidation.dll",
-        "lib/net7.0/FluentValidation.xml",
         "lib/net8.0/FluentValidation.dll",
-        "lib/net8.0/FluentValidation.xml",
-        "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml",
-        "lib/netstandard2.1/FluentValidation.dll",
-        "lib/netstandard2.1/FluentValidation.xml"
+        "lib/net8.0/FluentValidation.xml"
       ]
     },
     "FluentValidation.AspNetCore/11.3.1": {
@@ -1060,10 +1132,10 @@
         "logo.png"
       ]
     },
-    "MediatR/14.1.0": {
-      "sha512": "pdxza1pLqAk+06LV3THzNJrw5K5Ah6EC17TEkoC90gsAxwtXDJAQrGuDSDinHGgxWKWEn5ebqTNN3k1bLJOb0g==",
+    "MediatR/14.2.0": {
+      "sha512": "1vqNVS6ijU0IF78vDfIE99pi0iTa+M/1ztRlM98P+KL+Loi/O4knaR2+ex0AqbT5xBl01VFryjuYUAFtvGwzOQ==",
       "type": "package",
-      "path": "mediatr/14.1.0",
+      "path": "mediatr/14.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1080,7 +1152,7 @@
         "lib/net9.0/MediatR.xml",
         "lib/netstandard2.0/MediatR.dll",
         "lib/netstandard2.0/MediatR.xml",
-        "mediatr.14.1.0.nupkg.sha512",
+        "mediatr.14.2.0.nupkg.sha512",
         "mediatr.nuspec"
       ]
     },
@@ -3019,17 +3091,24 @@
         "system.composition.typedparts.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Shared.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Shared.Contracts/Shared.Contracts.csproj",
+      "msbuildProject": "../Shared.Contracts/Shared.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Carter >= 10.0.0",
       "FluentValidation.AspNetCore >= 11.3.1",
-      "MediatR >= 14.1.0",
+      "MediatR >= 14.2.0",
       "Microsoft.EntityFrameworkCore >= 10.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.11",
       "Microsoft.Extensions.Configuration.Abstractions >= 10.0.11",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 10.0.11",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.3"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.3",
+      "Shared.Contracts >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3056,7 +3135,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Contracts\\Shared.Contracts.csproj": {
+              "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Contracts\\Shared.Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -3075,13 +3158,17 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Carter": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.3.1, )"
           },
           "MediatR": {
             "target": "Package",
-            "version": "[14.1.0, )"
+            "version": "[14.2.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
