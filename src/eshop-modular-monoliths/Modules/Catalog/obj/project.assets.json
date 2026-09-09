@@ -89,6 +89,27 @@
           }
         }
       },
+      "Mapster/10.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Mapster.Core": "10.0.12"
+        },
+        "compile": {
+          "lib/net10.0/Mapster.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/Mapster.dll": {}
+        }
+      },
+      "Mapster.Core/10.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Mapster.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mapster.Core.dll": {}
+        }
+      },
       "MediatR/14.2.0": {
         "type": "package",
         "dependencies": {
@@ -610,6 +631,7 @@
         "dependencies": {
           "Carter": "10.0.0",
           "FluentValidation.AspNetCore": "11.3.1",
+          "Mapster": "10.0.12",
           "MediatR": "14.2.0",
           "Microsoft.EntityFrameworkCore": "10.0.11",
           "Microsoft.Extensions.Configuration.Abstractions": "10.0.11",
@@ -721,6 +743,35 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "Mapster/10.0.12": {
+      "sha512": "ap0sVf4YxqYVSj2wafyrknuj2hWkWhpSm+SXTvrOQlc2vLG7u51dJ8GazaSHLLG6saHN5uPCBeP+YIqXS0a1vg==",
+      "type": "package",
+      "path": "mapster/10.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net10.0/Mapster.dll",
+        "lib/net8.0/Mapster.dll",
+        "lib/net9.0/Mapster.dll",
+        "lib/netstandard2.0/Mapster.dll",
+        "mapster.10.0.12.nupkg.sha512",
+        "mapster.nuspec"
+      ]
+    },
+    "Mapster.Core/10.0.12": {
+      "sha512": "iLPB0xAzxMWKhbBjWb4ZdQMV/TNEuZafDOoONhtDjBD4bEmf6BwcZt2v0MHhS7xbjwi1JUR266XMarfEs9BUIw==",
+      "type": "package",
+      "path": "mapster.core/10.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Mapster.Core.dll",
+        "mapster.core.10.0.12.nupkg.sha512",
+        "mapster.core.nuspec"
       ]
     },
     "MediatR/14.2.0": {
@@ -2173,6 +2224,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Mapster >= 10.0.12",
       "Microsoft.Extensions.Configuration >= 10.0.11",
       "Microsoft.Extensions.DependencyInjection >= 10.0.11",
       "Shared >= 1.0.0"
@@ -2225,6 +2277,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Mapster": {
+            "target": "Package",
+            "version": "[10.0.12, )"
+          },
           "Microsoft.Extensions.Configuration": {
             "target": "Package",
             "version": "[10.0.11, )"

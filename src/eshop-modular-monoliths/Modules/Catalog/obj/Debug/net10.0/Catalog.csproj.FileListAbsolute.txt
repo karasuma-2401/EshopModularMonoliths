@@ -1,8 +1,10 @@
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Catalog.deps.json
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Catalog.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Catalog.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Shared.Contracts.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Shared.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Shared.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Shared.Contracts.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\Catalog.csproj.AssemblyReference.cache
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\Catalog.GeneratedMSBuildEditorConfig.editorconfig
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\Catalog.AssemblyInfoInputs.cache
@@ -14,5 +16,3 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\n
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\refint\Catalog.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\Catalog.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\ref\Catalog.dll
-A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Shared.Contracts.dll
-A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Shared.Contracts.pdb

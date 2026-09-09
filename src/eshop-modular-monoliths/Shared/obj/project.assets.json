@@ -102,6 +102,27 @@
           }
         }
       },
+      "Mapster/10.0.12": {
+        "type": "package",
+        "dependencies": {
+          "Mapster.Core": "10.0.12"
+        },
+        "compile": {
+          "lib/net10.0/Mapster.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/Mapster.dll": {}
+        }
+      },
+      "Mapster.Core/10.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Mapster.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Mapster.Core.dll": {}
+        }
+      },
       "MediatR/14.2.0": {
         "type": "package",
         "dependencies": {
@@ -1130,6 +1151,35 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Mapster/10.0.12": {
+      "sha512": "ap0sVf4YxqYVSj2wafyrknuj2hWkWhpSm+SXTvrOQlc2vLG7u51dJ8GazaSHLLG6saHN5uPCBeP+YIqXS0a1vg==",
+      "type": "package",
+      "path": "mapster/10.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net10.0/Mapster.dll",
+        "lib/net8.0/Mapster.dll",
+        "lib/net9.0/Mapster.dll",
+        "lib/netstandard2.0/Mapster.dll",
+        "mapster.10.0.12.nupkg.sha512",
+        "mapster.nuspec"
+      ]
+    },
+    "Mapster.Core/10.0.12": {
+      "sha512": "iLPB0xAzxMWKhbBjWb4ZdQMV/TNEuZafDOoONhtDjBD4bEmf6BwcZt2v0MHhS7xbjwi1JUR266XMarfEs9BUIw==",
+      "type": "package",
+      "path": "mapster.core/10.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/Mapster.Core.dll",
+        "mapster.core.10.0.12.nupkg.sha512",
+        "mapster.core.nuspec"
       ]
     },
     "MediatR/14.2.0": {
@@ -3102,6 +3152,7 @@
     "net10.0": [
       "Carter >= 10.0.0",
       "FluentValidation.AspNetCore >= 11.3.1",
+      "Mapster >= 10.0.12",
       "MediatR >= 14.2.0",
       "Microsoft.EntityFrameworkCore >= 10.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.11",
@@ -3165,6 +3216,10 @@
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[11.3.1, )"
+          },
+          "Mapster": {
+            "target": "Package",
+            "version": "[10.0.12, )"
           },
           "MediatR": {
             "target": "Package",

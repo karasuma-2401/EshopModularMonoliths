@@ -15,7 +15,7 @@ public static class CarterExtensions
             foreach (var assembly in assemblies)
             {
                 var modules = assembly.GetTypes()
-                    .Where(t => t.IsAssignableTo(typeof(CarterModule))).ToArray();
+                    .Where(t => t.IsAssignableTo(typeof(ICarterModule))).ToArray();
                 config.WithModules(modules);
             }
         });

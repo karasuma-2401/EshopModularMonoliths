@@ -1,7 +1,10 @@
 using Carter;
+using Scalar.AspNetCore;
 using Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddOpenApi();
 
 var catalogAssembly = typeof(CatalogModule).Assembly;
 var basketAssembly = typeof(BasketModule).Assembly;
@@ -15,9 +18,11 @@ builder.Services
     .AddCatalogModule(builder.Configuration)
     .AddBasketModule(builder.Configuration)
     .AddOrderingModule(builder.Configuration);
-    
+
 var app = builder.Build();
 
+app.MapOpenApi();
+app.MapScalarApiReference();
 app.MapCarter();
 
 app

@@ -1,8 +1,10 @@
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Basket.deps.json
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Basket.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Basket.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Shared.Contracts.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Shared.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Shared.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Shared.Contracts.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\obj\Debug\net10.0\Basket.csproj.AssemblyReference.cache
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\obj\Debug\net10.0\Basket.GeneratedMSBuildEditorConfig.editorconfig
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\obj\Debug\net10.0\Basket.AssemblyInfoInputs.cache
@@ -14,5 +16,3 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\obj\Debug\ne
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\obj\Debug\net10.0\refint\Basket.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\obj\Debug\net10.0\Basket.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\obj\Debug\net10.0\ref\Basket.dll
-A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Shared.Contracts.dll
-A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Basket\bin\Debug\net10.0\Shared.Contracts.pdb

@@ -54,6 +54,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[10.0.12, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -63,6 +67,14 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[10.0.11, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[14.7.1, )"
+            },
+            "Scalar.AspNetCore": {
+              "target": "Package",
+              "version": "[2.17.3, )"
             }
           },
           "imports": [
@@ -893,6 +905,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[10.0.12, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[10.0.11, )"
@@ -1937,6 +1953,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.1, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[10.0.12, )"
             },
             "MediatR": {
               "target": "Package",

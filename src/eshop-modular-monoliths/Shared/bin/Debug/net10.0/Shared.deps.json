@@ -10,6 +10,7 @@
         "dependencies": {
           "Carter": "10.0.0",
           "FluentValidation.AspNetCore": "11.3.1",
+          "Mapster": "10.0.12",
           "MediatR": "14.2.0",
           "Microsoft.EntityFrameworkCore": "10.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "10.0.11",
@@ -80,6 +81,25 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Mapster/10.0.12": {
+        "dependencies": {
+          "Mapster.Core": "10.0.12"
+        },
+        "runtime": {
+          "lib/net10.0/Mapster.dll": {
+            "assemblyVersion": "10.0.12.0",
+            "fileVersion": "10.0.12.0"
+          }
+        }
+      },
+      "Mapster.Core/10.0.12": {
+        "runtime": {
+          "lib/netstandard2.0/Mapster.Core.dll": {
+            "assemblyVersion": "10.0.12.0",
+            "fileVersion": "10.0.12.0"
           }
         }
       },
@@ -663,6 +683,20 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "Mapster/10.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ap0sVf4YxqYVSj2wafyrknuj2hWkWhpSm+SXTvrOQlc2vLG7u51dJ8GazaSHLLG6saHN5uPCBeP+YIqXS0a1vg==",
+      "path": "mapster/10.0.12",
+      "hashPath": "mapster.10.0.12.nupkg.sha512"
+    },
+    "Mapster.Core/10.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iLPB0xAzxMWKhbBjWb4ZdQMV/TNEuZafDOoONhtDjBD4bEmf6BwcZt2v0MHhS7xbjwi1JUR266XMarfEs9BUIw==",
+      "path": "mapster.core/10.0.12",
+      "hashPath": "mapster.core.10.0.12.nupkg.sha512"
     },
     "MediatR/14.2.0": {
       "type": "package",
