@@ -1,0 +1,13 @@
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\bin\Debug\net10.0\Shared.Contracts.deps.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\bin\Debug\net10.0\Shared.Contracts.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\bin\Debug\net10.0\Shared.Contracts.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.csproj.AssemblyReference.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.AssemblyInfoInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.AssemblyInfo.cs
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.csproj.CoreCompileInputs.cache
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.sourcelink.json
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\refint\Shared.Contracts.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\Shared.Contracts.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Contracts\obj\Debug\net10.0\ref\Shared.Contracts.dll
