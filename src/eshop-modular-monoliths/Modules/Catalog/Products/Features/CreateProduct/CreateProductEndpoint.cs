@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Routing;
 namespace Catalog.Products.Features.CreateProduct;
 
 public record CreateProductRequest(
-    string Name, List<string> Category, List<string> ImageFile, decimal Price);
+    string Name, List<string> Category, string ImageFile, decimal Price);
 
 public record CreateProductResponse(Guid Id);
 

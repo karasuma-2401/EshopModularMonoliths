@@ -16,3 +16,5 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\n
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\refint\Catalog.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\Catalog.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\obj\Debug\net10.0\ref\Catalog.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Catalog.Contracts.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Modules\Catalog\bin\Debug\net10.0\Catalog.Contracts.pdb

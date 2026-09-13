@@ -625,6 +625,19 @@
           }
         }
       },
+      "Catalog.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Shared.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Catalog.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Catalog.Contracts.dll": {}
+        }
+      },
       "Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -2211,6 +2224,11 @@
         "postgresql.png"
       ]
     },
+    "Catalog.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Catalog.Contracts/Catalog.Contracts.csproj",
+      "msbuildProject": "../Catalog.Contracts/Catalog.Contracts.csproj"
+    },
     "Shared/1.0.0": {
       "type": "project",
       "path": "../../Shared/Shared.csproj",
@@ -2224,6 +2242,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Catalog.Contracts >= 1.0.0",
       "Mapster >= 10.0.12",
       "Microsoft.Extensions.Configuration >= 10.0.11",
       "Microsoft.Extensions.DependencyInjection >= 10.0.11",
@@ -2255,6 +2274,9 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
+            "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Catalog.Contracts\\Catalog.Contracts.csproj": {
+              "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Catalog.Contracts\\Catalog.Contracts.csproj"
+            },
             "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared\\Shared.csproj": {
               "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared\\Shared.csproj"
             }
