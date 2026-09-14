@@ -2,11 +2,11 @@ namespace Catalog.Products.Models;
 
 public class Product: Aggregate<Guid>
 {
-    public string Name { get; set; } = default!;
-    public List<string> Category { get; set; } = new();
+    public string Name { get; private set; } = default!;
+    public List<string> Category { get; private set; } = new();
     public string? Description { get; private set; }
-    public string ImageFile { get; set; } = default!;
-    public decimal Price { get; set; }
+    public string ImageFile { get; private set; } = default!;
+    public decimal Price { get; private set; }
 
     public static Product Create(Guid id, string name, List<string> category, string description,  string imageFile,
         decimal price)
@@ -45,9 +45,5 @@ public class Product: Aggregate<Guid>
         {
             AddDomainEvent(new ProductPriceChangedEvent(this));
         }
-    }
-    public static class ProductFactory
-    {
-        // todo later        
     }
 }

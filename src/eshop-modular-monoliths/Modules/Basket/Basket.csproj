@@ -4,7 +4,7 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Class1</RootNamespace>
+        <RootNamespace>Basket</RootNamespace>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
@@ -15,6 +15,10 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.11" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Basket\" />
     </ItemGroup>
 
 </Project>

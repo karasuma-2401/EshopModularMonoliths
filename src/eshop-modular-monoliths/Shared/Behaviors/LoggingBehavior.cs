@@ -35,3 +35,4 @@ public class LoggingBehavior<TRequest, TResponse>
         return response;
     }
 }
+

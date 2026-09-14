@@ -1,5 +1,6 @@
 using Carter;
 using Scalar.AspNetCore;
+using Shared.Exceptions;
 using Shared.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,7 +20,12 @@ builder.Services
     .AddBasketModule(builder.Configuration)
     .AddOrderingModule(builder.Configuration);
 
+builder.Services.AddExceptionHandler<CustomerExceptionHandler>();
+builder.Services.AddProblemDetails();
+
 var app = builder.Build();
+
+app.UseExceptionHandler(option => { });
 
 app.MapOpenApi();
 app.MapScalarApiReference();

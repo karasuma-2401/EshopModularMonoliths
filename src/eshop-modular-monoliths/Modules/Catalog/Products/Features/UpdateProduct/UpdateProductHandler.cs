@@ -1,4 +1,3 @@
-using System.Windows.Input;
 using FluentValidation;
 using Shared.Contracts.CQRS;
 using Shared.Exceptions;

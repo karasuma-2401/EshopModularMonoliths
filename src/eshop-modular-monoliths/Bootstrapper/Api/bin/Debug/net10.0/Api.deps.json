@@ -801,11 +801,23 @@
       },
       "Catalog/1.0.0": {
         "dependencies": {
+          "Catalog.Contracts": "1.0.0",
           "Mapster": "10.0.12",
           "Shared": "1.0.0"
         },
         "runtime": {
           "Catalog.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Catalog.Contracts/1.0.0": {
+        "dependencies": {
+          "Shared.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Catalog.Contracts.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1229,6 +1241,11 @@
       "sha512": ""
     },
     "Catalog/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Catalog.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

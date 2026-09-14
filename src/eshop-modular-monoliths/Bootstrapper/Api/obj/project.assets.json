@@ -1142,6 +1142,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "Catalog.Contracts": "1.0.0",
           "Mapster": "10.0.12",
           "Shared": "1.0.0"
         },
@@ -1150,6 +1151,19 @@
         },
         "runtime": {
           "bin/placeholder/Catalog.dll": {}
+        }
+      },
+      "Catalog.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Shared.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Catalog.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Catalog.Contracts.dll": {}
         }
       },
       "Ordering/1.0.0": {
@@ -3273,6 +3287,11 @@
       "type": "project",
       "path": "../../Modules/Catalog/Catalog.csproj",
       "msbuildProject": "../../Modules/Catalog/Catalog.csproj"
+    },
+    "Catalog.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Catalog.Contracts/Catalog.Contracts.csproj",
+      "msbuildProject": "../../Modules/Catalog.Contracts/Catalog.Contracts.csproj"
     },
     "Ordering/1.0.0": {
       "type": "project",

@@ -163,6 +163,7 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Basket.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Catalog.Contracts.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Catalog.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Ordering.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Contracts.dll
@@ -170,6 +171,7 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Basket.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Catalog.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Ordering.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Catalog.Contracts.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Contracts.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\obj\Debug\net10.0\Api.csproj.AssemblyReference.cache

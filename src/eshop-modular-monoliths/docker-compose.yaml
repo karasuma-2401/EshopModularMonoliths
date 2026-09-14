@@ -28,5 +28,13 @@ services:
       - "5433:5432"
     volumes:
       - postgres_eshopdb:/var/lib/postgresql
+  distributedcache:
+    image: redis
+    container_name: distributedcache
+    restart: always
+    ports:
+      - "6379:6379"
 volumes:
   postgres_eshopdb:
+    
+
