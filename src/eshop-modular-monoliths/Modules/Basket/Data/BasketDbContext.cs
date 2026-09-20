@@ -1,12 +1,15 @@
 using System.Reflection;
 using Basket.Models;
 using Microsoft.EntityFrameworkCore;
+using Shared.Data.Outbox;
 
 namespace Basket.Data;
 
 public class BasketDbContext(DbContextOptions<BasketDbContext> options) : DbContext(options)
 {
-    public   DbSet<ShoppingCart> ShoppingCarts => Set<ShoppingCart>();
+    public DbSet<ShoppingCart> ShoppingCarts => Set<ShoppingCart>();
+    public DbSet<ShoppingCartItem> ShoppingCartItems => Set<ShoppingCartItem>();
+    public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

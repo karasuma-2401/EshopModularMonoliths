@@ -11,6 +11,7 @@
           "Carter": "10.0.0",
           "FluentValidation.AspNetCore": "11.3.1",
           "Mapster": "10.0.12",
+          "MassTransit": "8.3.4",
           "MediatR": "14.2.0",
           "Microsoft.EntityFrameworkCore": "10.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "10.0.11",
@@ -100,6 +101,25 @@
           "lib/netstandard2.0/Mapster.Core.dll": {
             "assemblyVersion": "10.0.12.0",
             "fileVersion": "10.0.12.0"
+          }
+        }
+      },
+      "MassTransit/8.3.4": {
+        "dependencies": {
+          "MassTransit.Abstractions": "8.3.4"
+        },
+        "runtime": {
+          "lib/net9.0/MassTransit.dll": {
+            "assemblyVersion": "8.3.4.0",
+            "fileVersion": "8.3.4.0"
+          }
+        }
+      },
+      "MassTransit.Abstractions/8.3.4": {
+        "runtime": {
+          "lib/net9.0/MassTransit.Abstractions.dll": {
+            "assemblyVersion": "8.3.4.0",
+            "fileVersion": "8.3.4.0"
           }
         }
       },
@@ -697,6 +717,20 @@
       "sha512": "sha512-iLPB0xAzxMWKhbBjWb4ZdQMV/TNEuZafDOoONhtDjBD4bEmf6BwcZt2v0MHhS7xbjwi1JUR266XMarfEs9BUIw==",
       "path": "mapster.core/10.0.12",
       "hashPath": "mapster.core.10.0.12.nupkg.sha512"
+    },
+    "MassTransit/8.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mj/1OG4wAkw7M/bSBPMOGSJUHDh6daqaXaGnIEvivyZvBxFeoTV95/CTeid6LWLydKmE6mexW/8dcallrqy+cg==",
+      "path": "masstransit/8.3.4",
+      "hashPath": "masstransit.8.3.4.nupkg.sha512"
+    },
+    "MassTransit.Abstractions/8.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0a7nxUzJIP6v2pQYQQ8RhQR+XFtFCxUR9dJJK7ewLONuxj26issAoJicppCJdXHGaBdxAMCvWvKulHjGpuJoeA==",
+      "path": "masstransit.abstractions/8.3.4",
+      "hashPath": "masstransit.abstractions.8.3.4.nupkg.sha512"
     },
     "MediatR/14.2.0": {
       "type": "package",

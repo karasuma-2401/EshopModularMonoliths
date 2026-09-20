@@ -1,4 +1,3 @@
-using System.Numerics;
 using Basket.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -9,14 +8,17 @@ public class ShoppingCartConfiguration : IEntityTypeConfiguration<ShoppingCart>
 {
     public void Configure(EntityTypeBuilder<ShoppingCart> builder)
     {
-        builder.HasKey(x => x.Id);
-        builder.Property(x => x.UserName).IsRequired();
-        builder.OwnsMany(x => x.Items, ib =>
-        {
-            ib.WithOwner().HasForeignKey("ShoppingCartId");
-            ib.Property<Guid>("Id");
-            ib.HasKey("Id");
-        });
-        builder.Navigation(x => x.Items).UsePropertyAccessMode(PropertyAccessMode.Field);
+        builder.HasKey(e => e.Id);
+
+        builder.HasIndex(e => e.UserName)
+               .IsUnique();
+
+        builder.Property(e => e.UserName)
+               .IsRequired()
+               .HasMaxLength(100);
+
+        builder.HasMany(s => s.Items)
+               .WithOne()
+               .HasForeignKey(si => si.ShoppingCartId);
     }
 }

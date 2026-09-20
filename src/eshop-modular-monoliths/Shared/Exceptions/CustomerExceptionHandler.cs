@@ -10,12 +10,15 @@ public class CustomerExceptionHandler(ILogger<CustomerExceptionHandler> logger) 
 {
     public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)
     {
-        logger.LogError(
+        logger.LogError(exception,
             "Error Message: {exceptionMessage}, Time of occurence {time}",
             exception.Message, DateTime.UtcNow);
         (string Detail, string Title, int StatusCode) details = exception switch
         {
             ProductNotFoundException => (
+                exception.Message, exception.GetType().Name, StatusCodes.Status404NotFound),
+            
+            BasketNotFoundException => (
                 exception.Message, exception.GetType().Name, StatusCodes.Status404NotFound),
             
             ValidationException => (

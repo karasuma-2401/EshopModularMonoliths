@@ -53,6 +53,9 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Humanizer.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Mapster.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Mapster.Core.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\MassTransit.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\MassTransit.Abstractions.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\MassTransit.RabbitMqTransport.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\MediatR.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\MediatR.Contracts.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
@@ -67,6 +70,7 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -89,7 +93,11 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\NSwag.Core.Yaml.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\NSwag.Generation.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\NSwag.Generation.AspNetCore.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\RabbitMQ.Client.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Scalar.AspNetCore.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Scrutor.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\StackExchange.Redis.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\System.CodeDom.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\System.Composition.AttributedModel.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\System.Composition.Convention.dll
@@ -168,12 +176,14 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Ordering.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Contracts.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.dll
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Messaging.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Basket.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Catalog.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Ordering.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Catalog.Contracts.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Contracts.pdb
+A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\bin\Debug\net10.0\Shared.Messaging.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\obj\Debug\net10.0\Api.csproj.AssemblyReference.cache
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\obj\Debug\net10.0\rpswa.dswa.cache.json
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Bootstrapper\Api\obj\Debug\net10.0\Api.GeneratedMSBuildEditorConfig.editorconfig
