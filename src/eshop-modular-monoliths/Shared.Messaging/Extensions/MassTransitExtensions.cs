@@ -28,10 +28,16 @@ public static class MassTransitExtensions
                 var host = configuration["MessageBroker:Host"];
                 if (!string.IsNullOrEmpty(host))
                 {
-                    configurator.Host(new Uri(host), h =>
+                    var hostUri = new Uri(host);
+                    configurator.Host(hostUri, h =>
                     {
-                        var username = configuration["MessageBroker:UserName"] ?? configuration["MessageBroker:Username"];
-                        var password = configuration["MessageBroker:Password"];
+                        var userInfo = hostUri.UserInfo;
+                        var username = configuration["MessageBroker:UserName"] 
+                            ?? configuration["MessageBroker:Username"]
+                            ?? (!string.IsNullOrEmpty(userInfo) ? userInfo.Split(':')[0] : null);
+                        var password = configuration["MessageBroker:Password"]
+                            ?? (!string.IsNullOrEmpty(userInfo) && userInfo.Contains(':') ? userInfo.Split(':')[1] : null);
+
                         if (!string.IsNullOrEmpty(username)) h.Username(username);
                         if (!string.IsNullOrEmpty(password)) h.Password(password);
                     });
