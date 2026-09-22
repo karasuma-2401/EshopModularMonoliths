@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net10.0": {
       "Carter/10.0.0": {
@@ -2702,7 +2702,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
             "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Catalog.Contracts\\Catalog.Contracts.csproj": {
@@ -2731,7 +2730,6 @@
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "Mapster": {
