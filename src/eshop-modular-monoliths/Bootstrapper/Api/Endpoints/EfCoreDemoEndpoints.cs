@@ -28,11 +28,6 @@ public class EfCoreDemoEndpoints : ICarterModule
         group.MapGet("/n-plus-one", NPlusOneBenchmark)
             .WithName("DemoNPlusOneQuery")
             .WithSummary("3. Demo Lỗi kinh điển: N+1 Query vs Eager Loading (.Include)");
-
-        // 4. Demo Deferred Execution (Khi nào SQL thực sự gửi đi)
-        group.MapGet("/deferred-execution", DeferredExecutionDemo)
-            .WithName("DemoDeferredExecution")
-            .WithSummary("4. Demo LINQ to Entities: Deferred Execution & ToQueryString()");
     }
 
     private static async Task<IResult> SeedProductsBenchmark(
@@ -256,46 +251,6 @@ public class EfCoreDemoEndpoints : ICarterModule
                 Advantage = "Xem màn hình Terminal: EF Core tự sinh câu lệnh SQL LEFT JOIN và gửi ĐÚNG 1 CÂU SQL duy nhất!"
             },
             KeyTakeaway = "Tránh truy vấn con trong vòng lặp foreach! Luôn dùng .Include() (Eager Loading) hoặc .Select() Projection để gom dữ liệu trong 1 query."
-        });
-    }
-
-    private static async Task<IResult> DeferredExecutionDemo(
-        [FromServices] IServiceScopeFactory scopeFactory,
-        CancellationToken cancellationToken)
-    {
-        await EnsureSeedProducts(scopeFactory, 10, cancellationToken);
-
-        using var scope = scopeFactory.CreateScope();
-        var db = scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
-
-        // 1. Tạo câu truy vấn IQueryable từng bước (chưa bắn SQL)
-        IQueryable<Product> query = db.Products.AsNoTracking();
-
-        // Bước 1: Filter
-        query = query.Where(p => p.Price > 10);
-
-        // Bước 2: Sort
-        query = query.OrderByDescending(p => p.Price);
-
-        // Bước 3: Paging
-        query = query.Take(5);
-
-        // Lấy câu lệnh SQL thực tế mà EF Core biên dịch sẵn (chưa gửi tới DB!)
-        string generatedSql = query.ToQueryString();
-
-        // Bước 4: Thực thi truy vấn (Materialization) - SQL chỉ THỰC SỰ được gửi đi tại thời điểm này!
-        var sw = Stopwatch.StartNew();
-        var results = await query.ToListAsync(cancellationToken);
-        sw.Stop();
-
-        return Results.Ok(new
-        {
-            Title = "Demo 4: Deferred Execution (Thực thi trì hoãn) trong EF Core",
-            Concept = "IQueryable<T> chỉ là định nghĩa câu truy vấn (Expression Tree), CHƯA HỀ gửi lệnh nào tới Database cho tới khi bạn gọi ToListAsync(), FirstOrDefaultAsync(), CountAsync(),...",
-            GeneratedSql = generatedSql,
-            MaterializedCount = results.Count,
-            ExecutionTimeMs = sw.ElapsedMilliseconds,
-            Explanation = "Nhờ Deferred Execution, chúng ta có thể thoải mái nối thêm Where, OrderBy, Skip, Take linh hoạt theo điều kiện lọc của người dùng mà không lo truy vấn thừa vào Database!"
         });
     }
 
