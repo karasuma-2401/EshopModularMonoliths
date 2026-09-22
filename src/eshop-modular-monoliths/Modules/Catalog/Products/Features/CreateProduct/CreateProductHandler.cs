@@ -1,7 +1,3 @@
-using FluentValidation;
-using Mapster;
-using Shared.Contracts.CQRS;
-
 namespace Catalog.Products.Features.CreateProduct;
 
 public record CreateProductCommand(

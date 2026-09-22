@@ -34,20 +34,6 @@ public static class BasketModule
             options.Configuration = redisConnectionString;
         });
 
-        services.AddMassTransit(config =>
-        {
-            config.SetKebabCaseEndpointNameFormatter();
-            config.UsingRabbitMq((context, cfg) =>
-            {
-                cfg.Host(new Uri(configuration["MessageBroker:Host"]!), h =>
-                {
-                    h.Username(configuration["MessageBroker:UserName"]!);
-                    h.Password(configuration["MessageBroker:Password"]!);
-                });
-                cfg.ConfigureEndpoints(context);
-            });
-        });
-        
         services.AddHostedService<OutboxProcessorJob<BasketDbContext>>();
         return services;
     }

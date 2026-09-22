@@ -920,6 +920,10 @@
       "Shared.Messaging/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "MassTransit": "8.3.4",
+          "MassTransit.RabbitMQ": "8.3.4"
+        },
         "compile": {
           "bin/placeholder/Shared.Messaging.dll": {}
         },

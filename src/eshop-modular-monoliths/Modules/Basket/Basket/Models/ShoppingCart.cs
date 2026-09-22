@@ -12,7 +12,6 @@ public class ShoppingCart : Aggregate<Guid>
 
     public decimal TotalPrice => Items.Sum(i => i.Price * i.Quantity);
     
-    // Constructor mặc định cần thiết cho EF Core
     private ShoppingCart() { }
     
     [JsonConstructor]
@@ -98,5 +97,11 @@ public class ShoppingCartItem
         Color = color;
         Price = price;
         ProductName = productName;
+    }
+
+    public void UpdatePrice(decimal price)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(price);
+        Price = price;
     }
 }

@@ -1,0 +1,43 @@
+### =========================================================================
+### SEMINAR ENTITY FRAMEWORK CORE - KỊCH BẢN DEMO LIVE (5 PHÚT - THẮNG)
+### =========================================================================
+### Lưu ý quan trọng: 
+### Hãy chắc chắn backend API đang chạy (bấm Run trong IDE hoặc chạy lệnh:
+###   dotnet run --project src/eshop-modular-monoliths/Bootstrapper/Api/Api.csproj
+### =========================================================================
+
+@Host = http://localhost:5000
+
+### -------------------------------------------------------------------------
+### DEMO 1: BULK INSERT & BATCHING (SO SÁNH CŨ VS MỚI)
+### So sánh: Vòng lặp 50 SaveChanges() (CŨ) vs AddRange 1000 items + 1 SaveChanges() (MỚI)
+### Khán giả sẽ thấy: AddRange nhanh hơn gấp nhiều lần nhờ cơ chế Batching của EF Core.
+### -------------------------------------------------------------------------
+POST {{Host}}/demo/efcore/seed-products?count=1000&compareLoop=true
+Content-Type: application/json
+
+
+### -------------------------------------------------------------------------
+### DEMO 2: HIỆU NĂNG CHANGE TRACKER (Tracking vs AsNoTracking)
+### Query 1000 records từ database:
+### - AsTracking: EF Core tạo snapshot trong RAM cho 1000 objects -> Tốn RAM & CPU
+### - AsNoTracking: Tắt snapshot, map thẳng sang C# objects -> Nhanh hơn 2x - 4x!
+### -------------------------------------------------------------------------
+GET {{Host}}/demo/efcore/tracking-vs-asnotracking?count=1000
+
+
+### -------------------------------------------------------------------------
+### DEMO 3: LỖI KINH ĐIỂN N+1 QUERY VS EAGER LOADING (.Include)
+### Lấy 10 Carts kèm các Items:
+### - N+1 (Cách sai): Bắn 1 + 10 = 11 câu SQL riêng rẽ vào PostgreSQL (Xem terminal log nhảy 11 lần)
+### - Eager Loading (Cách chuẩn): Bắn ĐÚNG 1 câu SQL dùng LEFT JOIN duy nhất!
+### -------------------------------------------------------------------------
+GET {{Host}}/demo/efcore/n-plus-one?orderCount=10
+
+
+### -------------------------------------------------------------------------
+### DEMO 4: DEFERRED EXECUTION (THỰC THI TRÌ HOÃN TRONG LINQ TO ENTITIES)
+### Chứng minh: IQueryable chỉ là biểu thức, ToQueryString() cho xem trước SQL
+### SQL CHỈ THỰC SỰ ĐƯỢC GỬI ĐI khi gọi ToListAsync() / FirstOrDefaultAsync() / CountAsync()!
+### -------------------------------------------------------------------------
+GET {{Host}}/demo/efcore/deferred-execution

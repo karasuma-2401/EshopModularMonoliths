@@ -1269,7 +1269,8 @@
         "dependencies": {
           "Catalog.Contracts": "1.0.0",
           "Mapster": "10.0.12",
-          "Shared": "1.0.0"
+          "Shared": "1.0.0",
+          "Shared.Messaging": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Catalog.dll": {}
@@ -1295,7 +1296,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Shared": "1.0.0"
+          "MassTransit.RabbitMQ": "8.3.4",
+          "Shared": "1.0.0",
+          "Shared.Messaging": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Ordering.dll": {}
@@ -1341,6 +1344,10 @@
       "Shared.Messaging/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "MassTransit": "8.3.4",
+          "MassTransit.RabbitMQ": "8.3.4"
+        },
         "compile": {
           "bin/placeholder/Shared.Messaging.dll": {}
         },
@@ -3627,7 +3634,8 @@
       "Microsoft.Extensions.DependencyInjection >= 10.0.11",
       "NSwag.AspNetCore >= 14.7.1",
       "Ordering >= 1.0.0",
-      "Scalar.AspNetCore >= 2.17.3"
+      "Scalar.AspNetCore >= 2.17.3",
+      "Shared.Messaging >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3663,6 +3671,9 @@
             },
             "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Ordering\\Ordering.csproj": {
               "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Ordering\\Ordering.csproj"
+            },
+            "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj": {
+              "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj"
             }
           }
         }

@@ -14,7 +14,8 @@
           "Microsoft.EntityFrameworkCore.Design": "10.0.11",
           "NSwag.AspNetCore": "14.7.1",
           "Ordering": "1.0.0",
-          "Scalar.AspNetCore": "2.17.3"
+          "Scalar.AspNetCore": "2.17.3",
+          "Shared.Messaging": "1.0.0"
         },
         "runtime": {
           "Api.dll": {}
@@ -888,7 +889,8 @@
         "dependencies": {
           "Catalog.Contracts": "1.0.0",
           "Mapster": "10.0.12",
-          "Shared": "1.0.0"
+          "Shared": "1.0.0",
+          "Shared.Messaging": "1.0.0"
         },
         "runtime": {
           "Catalog.dll": {
@@ -910,7 +912,9 @@
       },
       "Ordering/1.0.0": {
         "dependencies": {
-          "Shared": "1.0.0"
+          "MassTransit.RabbitMQ": "8.3.4",
+          "Shared": "1.0.0",
+          "Shared.Messaging": "1.0.0"
         },
         "runtime": {
           "Ordering.dll": {
@@ -950,6 +954,10 @@
         }
       },
       "Shared.Messaging/1.0.0": {
+        "dependencies": {
+          "MassTransit": "8.3.4",
+          "MassTransit.RabbitMQ": "8.3.4"
+        },
         "runtime": {
           "Shared.Messaging.dll": {
             "assemblyVersion": "1.0.0.0",

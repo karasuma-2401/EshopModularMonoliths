@@ -10,3 +10,4 @@ A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\refint\Shared.Messaging.dll
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.pdb
 A:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\ref\Shared.Messaging.dll
+a:\EshopModularMonoliths\src\eshop-modular-monoliths\Shared.Messaging\obj\Debug\net10.0\Shared.Messaging.csproj.AssemblyReference.cache
