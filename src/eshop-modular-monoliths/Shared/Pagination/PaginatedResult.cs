@@ -1,6 +1,6 @@
 namespace Shared.Pagination;
 
-public class PaginationResult<TEntity>(int pageIndex, int pageSize, long count, IEnumerable<TEntity> data)
+public class PaginatedResult<TEntity>(int pageIndex, int pageSize, long count, IEnumerable<TEntity> data)
     where TEntity : class
 {
     private int PageIndex { get; } = pageIndex;

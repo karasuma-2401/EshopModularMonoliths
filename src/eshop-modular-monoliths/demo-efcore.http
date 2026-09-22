@@ -1,6 +1,11 @@
 ### =========================================================================
 ### SEMINAR ENTITY FRAMEWORK CORE - KỊCH BẢN DEMO LIVE (5 PHÚT - THẮNG)
 ### =========================================================================
+### Lưu ý quan trọng: 
+### Hãy chắc chắn backend API đang chạy (bấm Run trong IDE hoặc chạy lệnh:
+###   dotnet run --project src/eshop-modular-monoliths/Bootstrapper/Api/Api.csproj
+### =========================================================================
+
 @Host = http://localhost:5000
 
 ### -------------------------------------------------------------------------
@@ -23,7 +28,7 @@ GET {{Host}}/demo/efcore/tracking-vs-asnotracking?count=1000
 
 ### -------------------------------------------------------------------------
 ### DEMO 3: LỖI KINH ĐIỂN N+1 QUERY VS EAGER LOADING (.Include)
-### Lấy 10 Orders kèm các Items:
+### Lấy 10 Carts kèm các Items:
 ### - N+1 (Cách sai): Bắn 1 + 10 = 11 câu SQL riêng rẽ vào PostgreSQL (Xem terminal log nhảy 11 lần)
 ### - Eager Loading (Cách chuẩn): Bắn ĐÚNG 1 câu SQL dùng LEFT JOIN duy nhất!
 ### -------------------------------------------------------------------------

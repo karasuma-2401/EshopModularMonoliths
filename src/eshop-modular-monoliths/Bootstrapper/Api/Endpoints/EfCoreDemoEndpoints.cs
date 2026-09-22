@@ -4,9 +4,6 @@ using Catalog.data;
 using Catalog.Products.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Ordering.Data;
-using Ordering.Orders.Models;
-using Ordering.Orders.ValueObjects;
 
 namespace Api.Endpoints;
 
@@ -39,13 +36,16 @@ public class EfCoreDemoEndpoints : ICarterModule
     }
 
     private static async Task<IResult> SeedProductsBenchmark(
-        [FromQuery] int count,
-        [FromQuery] bool compareLoop,
+        [FromQuery] int? count,
+        [FromQuery] bool? compareLoop,
         [FromServices] IServiceScopeFactory scopeFactory,
         CancellationToken cancellationToken)
     {
-        if (count <= 0) count = 1000;
-        if (count > 2000) count = 2000;
+        int actualCount = count ?? 1000;
+        if (actualCount <= 0) actualCount = 1000;
+        if (actualCount > 2000) actualCount = 2000;
+
+        bool testLoop = compareLoop ?? false;
 
         using var scope = scopeFactory.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
@@ -55,7 +55,7 @@ public class EfCoreDemoEndpoints : ICarterModule
         long? loopElapsedMs = null;
         int loopCount = 50; // Thử 50 items bằng vòng lặp SaveChanges để thấy độ trễ
         
-        if (compareLoop)
+        if (testLoop)
         {
             var loopStopwatch = Stopwatch.StartNew();
             for (int i = 0; i < loopCount; i++)
@@ -76,7 +76,7 @@ public class EfCoreDemoEndpoints : ICarterModule
         }
 
         // Batch Insert phần còn lại bằng AddRange + 1 lần SaveChangesAsync()
-        int remainingToSeed = count;
+        int remainingToSeed = actualCount;
         var batchStopwatch = Stopwatch.StartNew();
         var batchProducts = new List<Product>();
         
@@ -122,18 +122,26 @@ public class EfCoreDemoEndpoints : ICarterModule
     }
 
     private static async Task<IResult> TrackingVsAsNoTrackingBenchmark(
-        [FromQuery] int count,
+        [FromQuery] int? count,
         [FromServices] IServiceScopeFactory scopeFactory,
         CancellationToken cancellationToken)
     {
-        if (count <= 0) count = 1000;
+        int actualCount = count ?? 1000;
+        if (actualCount <= 0) actualCount = 1000;
+
+        // Đảm bảo có sẵn data để đo
+        await EnsureSeedProducts(scopeFactory, Math.Min(actualCount, 200), cancellationToken);
 
         // 1. Đo lường WITH TRACKING (Mặc định)
         using var scope1 = scopeFactory.CreateScope();
         var db1 = scope1.ServiceProvider.GetRequiredService<CatalogDbContext>();
         
         var sw1 = Stopwatch.StartNew();
-        var trackedProducts = await db1.Products.AsTracking().Take(count).ToListAsync(cancellationToken);
+        var trackedProducts = await db1.Products
+            .AsTracking()
+            .OrderBy(p => p.Id)
+            .Take(actualCount)
+            .ToListAsync(cancellationToken);
         sw1.Stop();
         var trackedCount = db1.ChangeTracker.Entries().Count();
 
@@ -142,7 +150,11 @@ public class EfCoreDemoEndpoints : ICarterModule
         var db2 = scope2.ServiceProvider.GetRequiredService<CatalogDbContext>();
         
         var sw2 = Stopwatch.StartNew();
-        var untrackedProducts = await db2.Products.AsNoTracking().Take(count).ToListAsync(cancellationToken);
+        var untrackedProducts = await db2.Products
+            .AsNoTracking()
+            .OrderBy(p => p.Id)
+            .Take(actualCount)
+            .ToListAsync(cancellationToken);
         sw2.Stop();
         var untrackedCount = db2.ChangeTracker.Entries().Count();
 
@@ -176,15 +188,17 @@ public class EfCoreDemoEndpoints : ICarterModule
     }
 
     private static async Task<IResult> NPlusOneBenchmark(
-        [FromQuery] int cartCount,
+        [FromQuery] int? cartCount,
+        [FromQuery] int? orderCount,
         [FromServices] IServiceScopeFactory scopeFactory,
         CancellationToken cancellationToken)
     {
-        if (cartCount <= 0) cartCount = 10;
-        if (cartCount > 50) cartCount = 50;
+        int actualCount = cartCount ?? orderCount ?? 10;
+        if (actualCount <= 0) actualCount = 10;
+        if (actualCount > 50) actualCount = 50;
 
         // Đảm bảo có ít nhất cartCount giỏ hàng có items để demo
-        await EnsureSeedShoppingCarts(scopeFactory, cartCount, cancellationToken);
+        await EnsureSeedShoppingCarts(scopeFactory, actualCount, cancellationToken);
 
         // 1. Minh họa N+1 Queries (Anti-pattern kinh điển: Lấy Carts rồi dùng vòng lặp query Items)
         using var scope1 = scopeFactory.CreateScope();
@@ -194,12 +208,11 @@ public class EfCoreDemoEndpoints : ICarterModule
         // Câu query số 1: Lấy danh sách ShoppingCarts
         var carts = await db1.ShoppingCarts
             .OrderBy(c => c.UserName)
-            .Take(cartCount)
+            .Take(actualCount)
             .ToListAsync(cancellationToken);
         
         // N câu query tiếp theo: Từng cart lại bắn 1 câu SQL riêng để lấy Items
         int itemQueriesCount = 0;
-        var loadedItems = new List<object>();
         foreach (var cart in carts)
         {
             var items = await db1.ShoppingCartItems
@@ -219,7 +232,7 @@ public class EfCoreDemoEndpoints : ICarterModule
         var eagerCarts = await db2.ShoppingCarts
             .Include(c => c.Items)
             .OrderBy(c => c.UserName)
-            .Take(cartCount)
+            .Take(actualCount)
             .ToListAsync(cancellationToken);
         swEager.Stop();
         int totalSqlEager = 1;
@@ -227,13 +240,13 @@ public class EfCoreDemoEndpoints : ICarterModule
         return Results.Ok(new
         {
             Title = "Demo 3: Bài toán kinh điển N+1 Query và Giải pháp Eager Loading (.Include)",
-            CartsRequested = cartCount,
+            CartsRequested = actualCount,
             AntiPattern_NPlusOne = new
             {
                 TotalSqlSentToDb = totalSqlNPlusOne,
                 Formula = $"1 (SELECT ShoppingCarts) + {itemQueriesCount} (SELECT ShoppingCartItems cho từng Cart) = {totalSqlNPlusOne} câu SQL",
                 ExecutionTimeMs = swNPlusOne.ElapsedMilliseconds,
-                Warning = "Xem màn hình Terminal: EF Core bắn liên tiếp 11 câu SELECT riêng biệt tới PostgreSQL! Khi dữ liệu lớn, database sẽ quá tải kết nối."
+                Warning = "Xem màn hình Terminal: EF Core bắn liên tiếp nhiều câu SELECT riêng biệt tới PostgreSQL! Khi dữ liệu lớn, database sẽ quá tải kết nối."
             },
             Solution_EagerLoading = new
             {
@@ -250,6 +263,8 @@ public class EfCoreDemoEndpoints : ICarterModule
         [FromServices] IServiceScopeFactory scopeFactory,
         CancellationToken cancellationToken)
     {
+        await EnsureSeedProducts(scopeFactory, 10, cancellationToken);
+
         using var scope = scopeFactory.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
 
@@ -257,7 +272,7 @@ public class EfCoreDemoEndpoints : ICarterModule
         IQueryable<Product> query = db.Products.AsNoTracking();
 
         // Bước 1: Filter
-        query = query.Where(p => p.Price > 50);
+        query = query.Where(p => p.Price > 10);
 
         // Bước 2: Sort
         query = query.OrderByDescending(p => p.Price);
@@ -284,6 +299,33 @@ public class EfCoreDemoEndpoints : ICarterModule
         });
     }
 
+    private static async Task EnsureSeedProducts(
+        IServiceScopeFactory scopeFactory,
+        int count,
+        CancellationToken cancellationToken)
+    {
+        using var scope = scopeFactory.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
+
+        var existing = await db.Products.CountAsync(cancellationToken);
+        if (existing >= count) return;
+
+        var products = new List<Product>();
+        for (int i = 0; i < count - existing; i++)
+        {
+            products.Add(Product.Create(
+                Guid.NewGuid(),
+                $"Demo-AutoSeed-Product-{existing + i + 1}",
+                new List<string> { "Demo", "AutoSeed" },
+                "Auto seeded product for benchmark",
+                "product.png",
+                50 + (i % 100)));
+        }
+
+        db.Products.AddRange(products);
+        await db.SaveChangesAsync(cancellationToken);
+    }
+
     private static async Task EnsureSeedShoppingCarts(
         IServiceScopeFactory scopeFactory,
         int count,
@@ -297,7 +339,10 @@ public class EfCoreDemoEndpoints : ICarterModule
 
         for (int i = 0; i < count - existing; i++)
         {
-            var cart = Basket.Models.ShoppingCart.Create(Guid.NewGuid(), $"demo_user_{i + 1:D3}");
+            var cart = Basket.Models.ShoppingCart.Create(
+                Guid.NewGuid(),
+                $"demo_user_{Guid.NewGuid().ToString("N")[..6]}");
+
             cart.AddItem(Guid.NewGuid(), 2, "Black", 1200, $"iPhone 16 Pro #{i + 1}");
             cart.AddItem(Guid.NewGuid(), 1, "White", 800, $"Sony WH-1000XM5 #{i + 1}");
             cart.AddItem(Guid.NewGuid(), 3, "Blue", 45, $"USB-C Cable #{i + 1}");

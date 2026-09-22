@@ -24,6 +24,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Basket\\Basket.csproj": {
@@ -34,6 +35,9 @@
               },
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Ordering\\Ordering.csproj": {
                 "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Ordering\\Ordering.csproj"
+              },
+              "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj": {
+                "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj"
               }
             }
           }
@@ -52,6 +56,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
@@ -534,6 +539,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Catalog.Contracts\\Catalog.Contracts.csproj": {
@@ -562,6 +568,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "MassTransit.RabbitMQ": {
@@ -899,6 +906,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Contracts\\Shared.Contracts.csproj": {
@@ -921,6 +929,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -1236,10 +1245,14 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Catalog.Contracts\\Catalog.Contracts.csproj": {
                 "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Catalog.Contracts\\Catalog.Contracts.csproj"
+              },
+              "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj": {
+                "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj"
               },
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared\\Shared.csproj": {
                 "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared\\Shared.csproj"
@@ -1261,6 +1274,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Mapster": {
@@ -1590,8 +1604,12 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
+              "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj": {
+                "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Messaging\\Shared.Messaging.csproj"
+              },
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared\\Shared.csproj": {
                 "projectPath": "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared\\Shared.csproj"
               }
@@ -1612,8 +1630,13 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.4, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[10.0.11, )"
@@ -1937,6 +1960,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -1955,6 +1979,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Carter": {
@@ -2280,6 +2305,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -2298,7 +2324,18 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.3.4, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -2613,6 +2650,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
               "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Shared.Contracts\\Shared.Contracts.csproj": {
@@ -2635,6 +2673,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Carter": {

@@ -1,5 +1,3 @@
-using System.Windows.Input;
-using Shared.Contracts.CQRS;
 using Shared.Exceptions;
 
 namespace Catalog.Products.Features.DeleteProduct;

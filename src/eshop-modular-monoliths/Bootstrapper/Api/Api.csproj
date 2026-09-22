@@ -11,6 +11,7 @@
       <ProjectReference Include="..\..\Modules\Basket\Basket.csproj" />
       <ProjectReference Include="..\..\Modules\Catalog\Catalog.csproj" />
       <ProjectReference Include="..\..\Modules\Ordering\Ordering.csproj" />
+      <ProjectReference Include="..\..\Shared.Messaging\Shared.Messaging.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,9 +1,3 @@
-using Carter;
-using MediatR;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Routing;
-
 namespace Catalog.Products.Features.DeleteProduct;
 
 public record DeleteProductResponse(bool IsSuccess);

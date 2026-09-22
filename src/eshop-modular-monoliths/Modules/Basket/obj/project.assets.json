@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {
       "Carter/10.0.0": {
@@ -920,6 +920,10 @@
       "Shared.Messaging/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "MassTransit": "8.3.4",
+          "MassTransit.RabbitMQ": "8.3.4"
+        },
         "compile": {
           "bin/placeholder/Shared.Messaging.dll": {}
         },
@@ -2854,6 +2858,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
             "A:\\EshopModularMonoliths\\src\\eshop-modular-monoliths\\Modules\\Catalog.Contracts\\Catalog.Contracts.csproj": {
@@ -2882,6 +2887,7 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "MassTransit.RabbitMQ": {
