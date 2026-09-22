@@ -33,11 +33,3 @@ GET {{Host}}/demo/efcore/tracking-vs-asnotracking?count=1000
 ### - Eager Loading (Cách chuẩn): Bắn ĐÚNG 1 câu SQL dùng LEFT JOIN duy nhất!
 ### -------------------------------------------------------------------------
 GET {{Host}}/demo/efcore/n-plus-one?orderCount=10
-
-
-### -------------------------------------------------------------------------
-### DEMO 4: DEFERRED EXECUTION (THỰC THI TRÌ HOÃN TRONG LINQ TO ENTITIES)
-### Chứng minh: IQueryable chỉ là biểu thức, ToQueryString() cho xem trước SQL
-### SQL CHỈ THỰC SỰ ĐƯỢC GỬI ĐI khi gọi ToListAsync() / FirstOrDefaultAsync() / CountAsync()!
-### -------------------------------------------------------------------------
-GET {{Host}}/demo/efcore/deferred-execution
